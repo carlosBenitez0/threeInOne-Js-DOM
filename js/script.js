@@ -29,7 +29,7 @@ function executeComand(comando) {
     case "borde":
       //se modifica el borde al detectar que el usuario escribe 'px' o 'rem'
       if (comandParts[1].includes("px") || comandParts[1].includes("rem")) {
-        box.style.border = comandParts[1] + " solid black";
+        box.style.border = comandParts[1] + " solid";
       }
       break;
     case "mover-arriba":
