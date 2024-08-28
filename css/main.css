@@ -172,6 +172,9 @@ h2 {
     text-decoration: underline;
 }
 
+h4 {
+    font-size: 1.5rem;
+}
 .comands-list {
     list-style: none;
 }
@@ -296,4 +299,39 @@ body.dark-mode {
 .dark-mode .historial-item {
     border-color: var(--dark-purple);
     color: var(--dark-text);
+}
+
+/* estilos para el color picker */
+
+.picker-title   {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.colorc-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 5px solid var(--dark-purple);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rgb-container {
+    color: var(--dark-purple);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.group > div{
+    display: flex;
+    font-weight: bold;
+}
+
+.group > div label{
+    flex: 1;       
 }
