@@ -85,6 +85,16 @@ body {
 }
 
 .main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container {
+    width: 100%;
+    padding: 2rem;
+}
+
+.content-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
 }
@@ -96,14 +106,22 @@ body {
     justify-content: center;
 }
 
-.box-container {
+.right-container {
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
-    width: 100%;
+}
 
+.box-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      width: 100%;
 }
 
 .box {
@@ -175,6 +193,12 @@ h2 {
 h4 {
     font-size: 1.5rem;
 }
+
+.info-container{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
 .comands-list {
     list-style: none;
 }

@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/best-css-reset.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link
-      rel="shortcut icon"
-      href="./multimedia/square-code.png"
-      type="image/x-icon"
-    />
-    <title>Square Modifier</title>
-  </head>
 
-  <body>
-    <div class="modal-bg no-visible">
-      <div class="modal">
-        <span id="close-modal">X</span>
-        <ol class="historial-list"></ol>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/best-css-reset.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="shortcut icon" href="./multimedia/square-code.png" type="image/x-icon" />
+  <title>Square Modifier</title>
+</head>
+
+<body>
+  <div class="modal-bg no-visible">
+    <div class="modal">
+      <span id="close-modal">X</span>
+      <ol class="historial-list"></ol>
     </div>
+  </div>  
 
-    <div class="structure-container">
-      <header class="header-container">
-        <div class="title-container">
-          <img
-            class="header-svg"
-            src="./multimedia/square-code.svg"
-            alt="Square code"
-          />
-          <h1 class="title">Square Modifier</h1>
+  <div class="structure-container">
+    <header class="header-container">
+      <div class="title-container">
+        <img class="header-svg" src="./multimedia/square-code.svg" alt="Square code" />
+        <h1 class="title">Square Modifier</h1>
+      </div>
+
+      <input type="button" value="Historial de comandos" class="btn-historial" id="btn-historial" />
+      <button id="darkModeToggle" class="btn-historial">Dark Mode</button>
+    </header> 
+
+    <main class="main-container">
+
+      <div class="info-container">
+        <h3 class="info-heaeder">Esta web implementa una interfaz interactiva que permite al usuario manipular un elemento de caja (box)
+          mediante comandos de texto.
+        </h2>
+        <br>
+        <p class="info-text">
+        El usuario puede ingresar comandos de texto en una caja de texto para ejecutarlos.
+        </p>
         </div>
-
-        <input
-          type="button"
-          value="Historial de comandos"
-          class="btn-historial"
-          id="btn-historial"
-        />
-        <button id="darkModeToggle" class="btn-historial">Dark Mode</button>
-      </header>
-
-      <main class="main-container">
+      
+      <div class="content-wrapper">
         <div class="left-container">
           <div class="box-container">
             <div class="box">box</div>
             <div class="input-container">
-              <input
-                type="text"
-                placeholder="Escriba un comando y presione enter"
-                class="comands-input"
-              />
+              <input type="text" placeholder="Escriba un comando y presione enter" class="comands-input" />
             </div>
           </div>
         </div>
@@ -111,14 +107,7 @@
                   <p id="red_text">0</p>
                 </div>
                 <div>
-                  <input
-                    type="range"
-                    id="red"
-                    min="0"
-                    max="255"
-                    value="0"
-                    step="1"
-                  />
+                  <input type="range" id="red" min="0" max="255" value="0" step="1" />
                 </div>
               </div>
               <div class="group">
@@ -127,14 +116,7 @@
                   <p id="green_text">0</p>
                 </div>
                 <div>
-                  <input
-                    type="range"
-                    id="green"
-                    min="0"
-                    max="255"
-                    value="0"
-                    step="1"
-                  />
+                  <input type="range" id="green" min="0" max="255" value="0" step="1" />
                 </div>
               </div>
               <div class="group">
@@ -143,24 +125,19 @@
                   <p id="blue_text">0</p>
                 </div>
                 <div>
-                  <input
-                    type="range"
-                    id="blue"
-                    min="0"
-                    max="255"
-                    value="0"
-                    step="1"
-                  />
+                  <input type="range" id="blue" min="0" max="255" value="0" step="1" />
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </main>
-      <footer class="footer-container">
-        <p>Comandos ejecutados: <span id="cantidad-comandos">0</span></p>
-      </footer>
-    </div>
-    <script src="./js/script.js"></script>
-  </body>
+      </div>
+    </main>
+    <footer class="footer-container">
+      <p>Comandos ejecutados: <span id="cantidad-comandos">0</span></p>
+    </footer>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+
 </html>
