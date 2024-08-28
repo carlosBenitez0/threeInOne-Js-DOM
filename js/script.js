@@ -125,3 +125,12 @@ modal_bg.addEventListener("click", () => {
 modal.addEventListener("click", (event) => {
   event.stopPropagation(); //Evitar la propagacion del evento click al modal por ser hijo del modal-bg
 });
+
+// Activa el Dark Mode
+
+const darkModeToggle = document.getElementById("darkModeToggle");
+const body = document.body;
+
+darkModeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+});
