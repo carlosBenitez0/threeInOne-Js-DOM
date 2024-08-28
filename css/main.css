@@ -7,6 +7,14 @@
     /* COLORES */
     --gradient-purple-blue2: linear-gradient(45deg, #9500ff, #1e90ff);
     --gradient-purple-blue-right: linear-gradient(to right, #6a0dad, #1e90ff);
+
+        
+    /* Colores para el Dark mode */
+    --dark-bg: #121212;
+    --dark-text: #e0e0e0;
+    --dark-border: #444;
+    --dark-purple: #9c27b0;
+
 }
 
 body {
@@ -229,4 +237,52 @@ h2 {
 
 .historial-item:last-of-type {
     margin-bottom: unset;
+}
+
+/* Estilos para el modo oscuro */
+
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.dark-mode .header-container {
+    background-image: linear-gradient(45deg, #1a0129, #0d47a1);
+}
+
+.dark-mode .box {
+    border-color: var(--dark-text);
+    color: var(--dark-text);
+}
+
+.dark-mode .comands-input {
+    background-color: var(--dark-bg);
+    border-color: var(--dark-purple);
+    color: var(--dark-text);
+}
+
+.dark-mode .comands-button {
+    background-color: var(--dark-purple);
+}
+
+.dark-mode .comands-button:hover {
+    background-color: #7b1fa2;
+}
+
+.dark-mode .highlight-text {
+    color: var(--dark-purple);
+}
+
+.dark-mode .footer-container {
+    background-color: #363636;
+}
+
+.dark-mode .modal {
+    background-color: var(--dark-bg);
+    box-shadow: .7rem .7rem .1rem #000;
+}
+
+.dark-mode .historial-item {
+    border-color: var(--dark-purple);
+    color: var(--dark-text);
 }
