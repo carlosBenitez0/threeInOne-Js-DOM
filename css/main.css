@@ -44,7 +44,18 @@ body {
     padding: 2rem;
     background-image: var(--gradient-purple-blue2);
 }
-_
+
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-svg {
+    width: 4rem;
+    filter: invert(100%);
+  }
+  
 .header-container p {
     color: white;
     font-weight: 700;
