@@ -99,6 +99,62 @@
               ancho(medida en px o rem)
             </li>
           </ul>
+          <h2 class="picker-title">
+            Cambiar el color de fondo del box por valores RGB ingresados
+          </h2>
+          <h4>En el rango de 1 a 256, cada paso cuenta como 1 comando</h4>
+          <div class="colorc-container">
+            <div class="rgb-container">
+              <div class="group">
+                <div>
+                  <label for="red">Rojo (R)</label>
+                  <p id="red_text">0</p>
+                </div>
+                <div>
+                  <input
+                    type="range"
+                    id="red"
+                    min="0"
+                    max="255"
+                    value="0"
+                    step="1"
+                  />
+                </div>
+              </div>
+              <div class="group">
+                <div>
+                  <label for="green">Verde (G)</label>
+                  <p id="green_text">0</p>
+                </div>
+                <div>
+                  <input
+                    type="range"
+                    id="green"
+                    min="0"
+                    max="255"
+                    value="0"
+                    step="1"
+                  />
+                </div>
+              </div>
+              <div class="group">
+                <div>
+                  <label for="blue">Azul (B)</label>
+                  <p id="blue_text">0</p>
+                </div>
+                <div>
+                  <input
+                    type="range"
+                    id="blue"
+                    min="0"
+                    max="255"
+                    value="0"
+                    step="1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <footer class="footer-container">
