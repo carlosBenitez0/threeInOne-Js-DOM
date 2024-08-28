@@ -5,12 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/best-css-reset.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" href="./multimedia/square.jpg" type="image/x-icon">
-    <title>Document</title>
+    <title>Square Modifier</title>
 </head>
 
 <body>
-    <script src=""></script>
+    <div class="modal-bg no-visible">
+        <div class="modal">
+            <span id="close-modal">X</span>
+            <ol class="historial-list">
+            </ol>
+        </div>
+    </div>
+
+    <div class="structure-container">
+
+        <header class="header-container">
+            <input type="button" value="Historial de comandos" class="btn-historial" id="btn-historial">
+        </header>
+        <main class="main-container">
+            <div class="left-container">
+                <div class="box-container">
+                    <div class="box">box</div>
+                    <div class="input-container">
+                        <input type="text" placeholder="Escriba un comando y presione enter" class="comands-input">
+                    </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <h2>Comandos</h2>
+                <ul class="comands-list">
+                    <li class="comand-item"><span class="highlight-text">modificar-texto: texto-</span> -> cambiar el
+                        texto
+                    </li>
+                    <li class="comand-item"><span class="highlight-text">f-color: color</span> -> cambiar el color de
+                        fondo
+                    </li>
+                    <li class="comand-item"><span class="highlight-text">color-texto: color</span> -> cambiar el color
+                        de la
+                        letra</li>
+                    <li class="comand-item"><span class="highlight-text">borde: medida</span> -> cambiar el
+                        tamaño
+                        del borde(px, rem, etc)</li>
+                    <li class="comand-item"><span class="highlight-text">mover-arriba: medida</span> -> mover el
+                        elemento
+                        hacia arriba(medida en px o rem)</li>
+                    <li class="comand-item"><span class="highlight-text">mover-abajo: medida</span> -> mover el elemento
+                        hacia abajo(medida en px o rem)</li>
+                    <li class="comand-item"><span class="highlight-text">mover-izquierda: medida</span> -> mover el
+                        elemento
+                        hacia izquierda(medida en px o rem)</li>
+                    <li class="comand-item"><span class="highlight-text">mover-derecha: medida</span> -> mover el
+                        elemento
+                        hacia derecha(medida en px o rem)</li>
+                    <li class="comand-item"><span class="highlight-text">borde-redondo: medida</span> -> redondear el
+                        borde(medida en px o rem)</li>
+                    <li class="comand-item"><span class="highlight-text">altura: medida</span> -> modificar la
+                        altura(medida en px o rem)</li>
+                    <li class="comand-item"><span class="highlight-text">ancho: medida</span> -> modificar el
+                        ancho(medida en px o rem)</li>
+
+                </ul>
+            </div>
+
+        </main>
+        <footer class="footer-container">
+            <p>Comandos ejecutados: <span id="cantidad-comandos">0</span></p>
+        </footer>
+    </div>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
