@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    /* FUENTE */
+    --montserrat-h1-h2-header-section-strong: 'Montserrat', sans-serif;
+
+    /* COLORES */
+    --gradient-purple-blue2: linear-gradient(45deg, #9500ff, #1e90ff);
+    --gradient-purple-blue-right: linear-gradient(to right, #6a0dad, #1e90ff);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+
+/* UTILIDADES */
+.no-visible {
+    display: none !important;
+}
+
+/* UTILIDADES */
+
+.structure-container {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 60px 1fr 50px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    padding: 2rem;
+    background-image: var(--gradient-purple-blue2);
+}
+
+.header-container p {
+    color: white;
+    font-weight: 700;
+}
+
+.btn-historial {
+    border: none;
+    outline: none;
+    padding: 1rem;
+    background-image: var(--gradient-purple-blue-right);
+    color: rgb(255, 255, 255);
+    border-radius: 10rem;
+    box-shadow:
+        0 .5rem .5rem rgba(0, 0, 0, 0.482),
+        inset .0 .5rem .8rem rgba(255, 255, 255, 0.47),
+        inset .0 -.5rem .8rem rgba(0, 0, 0, 0.404);
+    cursor: pointer;
+    transition: color, box-shadow .3s ease;
+}
+
+.btn-historial:hover {
+    box-shadow:
+        0 .0rem .0rem rgba(0, 0, 0, 0.482),
+        inset .0 .8rem .8rem rgba(0, 0, 0, 0.47),
+        inset .0 -.8rem .8rem rgba(0, 0, 0, 0.404);
+    color: rgba(255, 255, 255, 0.516);
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+
+}
+
+.box {
+    height: 10rem;
+    width: 10rem;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.comands-input {
+    flex-grow: 1;
+    outline: none;
+    padding: 1rem;
+    border: none;
+    border-radius: .5rem;
+    border: 2px solid purple;
+    color: purple;
+}
+
+.comands-button {
+    padding: 1rem;
+    border: none;
+    background-color: none;
+    border-radius: .5rem;
+    color: white;
+    background-color: purple;
+    cursor: pointer;
+}
+
+.comands-button:hover {
+    background-color: rgb(92, 0, 92);
+}
+
+
+.right-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+h2 {
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.comands-list {
+    list-style: none;
+}
+
+.comand-item {
+    margin-bottom: 1rem;
+}
+
+.comand-item:last-of-type {
+    margin-bottom: unset;
+}
+
+.highlight-text {
+    font-weight: 700;
+    color: purple;
+}
+
+.footer-container {
+    padding: 2rem;
+    background-color: #262626;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Ventana modal */
+
+.modal-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background-color: #26262688;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    position: relative;
+    overflow: auto;
+    max-height: 40rem;
+    min-width: 20rem;
+    background-color: white;
+    padding: 2rem;
+    padding-top: 4rem;
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    box-shadow: .7rem .7rem .1rem black;
+}
+
+.modal span {
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.historial-list {
+    list-style: none;
+}
+
+.historial-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid purple;
+    color: purple;
+    border-radius: .5rem;
+    font-weight: 700;
+}
+
+.historial-item:last-of-type {
+    margin-bottom: unset;
+}
