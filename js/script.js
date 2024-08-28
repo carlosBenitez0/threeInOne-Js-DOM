@@ -134,3 +134,50 @@ const body = document.body;
 darkModeToggle.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
 });
+
+// Cambiar el color del box al cambiar los valores de los inputs
+
+const red_text = document.getElementById("red_text");
+const green_text = document.getElementById("green_text");
+const blue_text = document.getElementById("blue_text");
+
+const red_input = document.getElementById("red");
+const green_input = document.getElementById("green");
+const blue_input = document.getElementById("blue");
+
+let rgb = [0, 0, 0];
+
+//el rgb del contenido del box se ira modificando siempre que se ejecute la funcion changeRgb
+const changeRgb = () => {
+  box.style.background = `rgb(${rgb})`;
+};
+
+//modificar el valor r
+red_input.addEventListener("input", () => {
+  /* en el rgb, r es red, este codigo modifica ese valor en el array rgb en base al valor obtenido en el cambio
+   del valor del input de tipo range */
+  rgb[0] = red_input.value;
+  changeRgb(); //modificar el color de fondo
+  red_text.innerText = red_input.value; //modificar el valor del elemento p red_input
+  red_text.style.color = `rgb(${red_input.value}, 0, 0)`; //modificar el color de la letra del elemento p
+  console.log(rgb); //verificar el cambio en consola
+  //se aplica para los otros 2 colores en los eventos adyacentes
+});
+
+//modificar el valor g
+green_input.addEventListener("input", () => {
+  rgb[1] = green_input.value;
+  changeRgb();
+  green_text.innerText = green_input.value;
+  green_text.style.color = `rgb(0, ${green_input.value}, 0)`;
+  console.log(rgb);
+});
+
+//modificar el valor b
+blue_input.addEventListener("input", () => {
+  rgb[2] = blue_input.value;
+  changeRgb();
+  blue_text.innerText = blue_input.value;
+  blue_text.style.color = `rgb(0, 0, ${blue_input.value})`;
+  console.log(rgb);
+});
