@@ -31,12 +31,12 @@ body {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 5rem;
     padding: 2rem;
     background-image: var(--gradient-purple-blue2);
 }
-
+_
 .header-container p {
     color: white;
     font-weight: 700;
@@ -139,6 +139,12 @@ body {
     align-items: center;
     justify-content: center;
     gap: 2rem;
+
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
 
 }
 
