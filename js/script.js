@@ -140,6 +140,8 @@ darkModeToggle.addEventListener("click", () => {
 const red_text = document.getElementById("red_text");
 const green_text = document.getElementById("green_text");
 const blue_text = document.getElementById("blue_text");
+const picker_title = document.getElementById("picker-title");
+
 
 const red_input = document.getElementById("red");
 const green_input = document.getElementById("green");
@@ -147,11 +149,11 @@ const blue_input = document.getElementById("blue");
 
 let rgb = [0, 0, 0];
 
-//el rgb del contenido del box se ira modificando siempre que se ejecute la funcion changeRgb
+//el rgb del titulo se ira modificando siempre que se ejecute la funcion changeRgb
 const changeRgb = () => {
-  box.style.background = `rgb(${rgb})`;
+  picker_title.style.color = `rgb(${rgb})`;
+  cantidad = cantidad - 1 ;
 };
-
 //modificar el valor r
 red_input.addEventListener("input", () => {
   /* en el rgb, r es red, este codigo modifica ese valor en el array rgb en base al valor obtenido en el cambio
