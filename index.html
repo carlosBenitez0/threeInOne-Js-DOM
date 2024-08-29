@@ -2,76 +2,142 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/best-css-reset.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="shortcut icon" href="./multimedia/square.jpg" type="image/x-icon">
-    <title>Square Modifier</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/best-css-reset.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="shortcut icon" href="./multimedia/square-code.png" type="image/x-icon" />
+  <title>Square Modifier</title>
 </head>
 
 <body>
-    <div class="modal-bg no-visible">
-        <div class="modal">
-            <span id="close-modal">X</span>
-            <ol class="historial-list">
-            </ol>
+  <div class="modal-bg no-visible">
+    <div class="modal">
+      <span id="close-modal">X</span>
+      <ol class="historial-list"></ol>
+    </div>
+  </div>  
+
+  <div class="structure-container">
+    <header class="header-container">
+      <div class="title-container">
+        <img class="header-svg" src="./multimedia/square-code.svg" alt="Square code" />
+        <h1 class="title">Square Modifier</h1>
+      </div>
+
+      <input type="button" value="Historial de comandos" class="btn-historial" id="btn-historial" />
+      <button id="darkModeToggle" class="btn-historial">Dark Mode</button>
+    </header> 
+
+    <main class="main-container">
+
+      <div class="info-container">
+        <h3 class="info-heaeder">Esta web implementa una interfaz interactiva que permite al usuario manipular un elemento de caja (box)
+          mediante comandos de texto.
+        </h2>
+        <br>
+        <p class="info-text">
+        El usuario puede ingresar comandos de texto en una caja de texto para ejecutarlos.
+        </p>
         </div>
-    </div>
+      
+      <div class="content-wrapper">
+        <div class="left-container">
+          <div class="box-container">
+            <div class="box">box</div>
+            <div class="input-container">
+              <input type="text" placeholder="Escriba un comando y presione enter" class="comands-input" />
+            </div>
+          </div>
+        </div>
 
-    <div class="structure-container">
-
-        <header class="header-container">
-            <input type="button" value="Historial de comandos" class="btn-historial" id="btn-historial">
-        </header>
-        <main class="main-container">
-            <div class="left-container">
-                <div class="box-container">
-                    <div class="box">box</div>
-                    <div class="input-container">
-                        <input type="text" placeholder="Escriba un comando y presione enter" class="comands-input">
-                    </div>
+        <div class="right-container">
+          <h2>Comandos</h2>
+          <ul class="comands-list">
+            <li class="comand-item">
+              <span class="highlight-text">f-color: color</span> -> cambiar el
+              color de fondo
+            </li>
+            <li class="comand-item">
+              <span class="highlight-text">color-texto: color</span> -> cambiar
+              el color de la letra
+            </li>
+            <li class="comand-item">
+              <span class="highlight-text">borde: medida</span> -> cambiar el
+              tamaño del borde(px, rem, etc)
+            </li>
+            <li class="comand-item">
+              <span class="highlight-text">mover-arriba: medida</span> -> mover
+              el elemento hacia arriba(medida en px o rem)
+            </li>
+            <li class="comand-item">
+              <span class="highlight-text">mover-abajo: medida</span> -> mover
+              el elemento hacia abajo(medida en px o rem)
+            </li>
+            <li class="comand-item">
+              <span class="highlight-text">mover-izquierda: medida</span> ->
+              mover el elemento hacia izquierda(medida en px o rem)
+            </li>
+            <li class="comand-item">
+              <span class="highlight-text">mover-derecha: medida</span> -> mover
+              el elemento hacia derecha(medida en px o rem)
+            </li>
+            <li class="comand-item">
+              <span class="highlight-text">borde-redondo: medida</span> ->
+              redondear el borde(medida en px o rem)
+            </li>
+            <li class="comand-item">
+              <span class="highlight-text">altura: medida</span> -> modificar la
+              altura(medida en px o rem)
+            </li>
+            <li class="comand-item">
+              <span class="highlight-text">ancho: medida</span> -> modificar el
+              ancho(medida en px o rem)
+            </li>
+          </ul>
+          <h2 id="picker-title" class="picker-title">
+            Cambiar el color de este titulo por valores RGB ingresados
+          </h2>
+          <h4>En el rango de 1 a 256</h4>
+          <div class="colorc-container">
+            <div class="rgb-container">
+              <div class="group">
+                <div>
+                  <label for="red">Rojo (R)</label>
+                  <p id="red_text">0</p>
                 </div>
+                <div>
+                  <input type="range" id="red" min="0" max="255" value="0" step="1" />
+                </div>
+              </div>
+              <div class="group">
+                <div>
+                  <label for="green">Verde (G)</label>
+                  <p id="green_text">0</p>
+                </div>
+                <div>
+                  <input type="range" id="green" min="0" max="255" value="0" step="1" />
+                </div>
+              </div>
+              <div class="group">
+                <div>
+                  <label for="blue">Azul (B)</label>
+                  <p id="blue_text">0</p>
+                </div>
+                <div>
+                  <input type="range" id="blue" min="0" max="255" value="0" step="1" />
+                </div>
+              </div>
             </div>
-            <div class="right-container">
-                <h2>Comandos</h2>
-                <ul class="comands-list">
-                    <li class="comand-item"><span class="highlight-text">f-color: color</span> -> cambiar el color de
-                        fondo
-                    </li>
-                    <li class="comand-item"><span class="highlight-text">color-texto: color</span> -> cambiar el color
-                        de la
-                        letra</li>
-                    <li class="comand-item"><span class="highlight-text">borde: medida</span> -> cambiar el
-                        tamaño
-                        del borde(px, rem, etc)</li>
-                    <li class="comand-item"><span class="highlight-text">mover-arriba: medida</span> -> mover el
-                        elemento
-                        hacia arriba(medida en px o rem)</li>
-                    <li class="comand-item"><span class="highlight-text">mover-abajo: medida</span> -> mover el elemento
-                        hacia abajo(medida en px o rem)</li>
-                    <li class="comand-item"><span class="highlight-text">mover-izquierda: medida</span> -> mover el
-                        elemento
-                        hacia izquierda(medida en px o rem)</li>
-                    <li class="comand-item"><span class="highlight-text">mover-derecha: medida</span> -> mover el
-                        elemento
-                        hacia derecha(medida en px o rem)</li>
-                    <li class="comand-item"><span class="highlight-text">borde-redondo: medida</span> -> redondear el
-                        borde(medida en px o rem)</li>
-                    <li class="comand-item"><span class="highlight-text">altura: medida</span> -> modificar la
-                        altura(medida en px o rem)</li>
-                    <li class="comand-item"><span class="highlight-text">ancho: medida</span> -> modificar el
-                        ancho(medida en px o rem)</li>
-
-                </ul>
-            </div>
-
-        </main>
-        <footer class="footer-container">
-            <p>Comandos ejecutados: <span id="cantidad-comandos">0</span></p>
-        </footer>
-    </div>
-    <script src="./js/script.js"></script>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer-container">
+      <p>Comandos ejecutados: <span id="cantidad-comandos">0</span></p>
+    </footer>
+  </div>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
