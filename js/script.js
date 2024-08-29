@@ -133,6 +133,13 @@ const body = document.body;
 
 darkModeToggle.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
+
+  // Cambia el texto del botón según el modo actual
+  if (body.classList.contains("dark-mode")) {
+    darkModeToggle.textContent = "Light Mode";
+  } else {
+    darkModeToggle.textContent = "Dark Mode";
+  }
 });
 
 // Cambiar el color del box al cambiar los valores de los inputs
@@ -141,7 +148,6 @@ const red_text = document.getElementById("red_text");
 const green_text = document.getElementById("green_text");
 const blue_text = document.getElementById("blue_text");
 const picker_title = document.getElementById("picker-title");
-
 
 const red_input = document.getElementById("red");
 const green_input = document.getElementById("green");
