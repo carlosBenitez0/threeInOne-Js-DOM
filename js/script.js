@@ -152,7 +152,6 @@ let rgb = [0, 0, 0];
 //el rgb del titulo se ira modificando siempre que se ejecute la funcion changeRgb
 const changeRgb = () => {
   picker_title.style.color = `rgb(${rgb})`;
-  cantidad = cantidad - 1 ;
 };
 //modificar el valor r
 red_input.addEventListener("input", () => {
