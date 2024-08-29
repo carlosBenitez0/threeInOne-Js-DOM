@@ -2,10 +2,11 @@
 
 | **Nombre de la Actividad** | **Creación de una página web utilizando el DOM** |
 |---------|---------|
+| **Integrantes** | Carlos Benítez, Guillermo Meléndez, Edgar Aristides |
 | **Tipo de actividad** | Carga de archivo |
 | **Tipo de Participación** | Grupal – 3 Integrantes |
 | **Ponderación** | 20% |
-| **Integrantes** | Carlos Benítez, Guillermo Meléndez, Edgar Aristides |
+
 
 ## Instrucciones
 
