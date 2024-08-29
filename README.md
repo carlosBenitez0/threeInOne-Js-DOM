@@ -1,4 +1,6 @@
-# Actividad #2 de la Semana 2
+# ACADEMIA DE TECNOLOGÍA CREATIVA KODIGO
+
+## **ACTIVIDAD 2: Creación de una página web utilizando el DOM**
 
 | **Nombre de la Actividad** | **Creación de una página web utilizando el DOM** |
 |---------|---------|
